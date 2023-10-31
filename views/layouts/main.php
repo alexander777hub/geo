@@ -69,22 +69,22 @@ AppAsset::register($this);
             'class' => 'navbar navbar-dark bg-dark',
         ],
     ]);
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav mr-auto'],
-        'items' => [
-            ['label' => 'Главная', 'url' => ['/site/index']],
+echo Nav::widget([
+    'options' => ['class' => 'navbar-nav mr-auto'],
+    'items' => [
+        ['label' => 'Главная', 'url' => ['/site/index']],
 
-        ],
-    ]);
-    NavBar::end();
-    ?>
+    ],
+]);
+NavBar::end();
+?>
 </header>
 
 <main role="main" class="flex-shrink-0">
     <div class="container">
         <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
+        'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+    ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
     </div>

@@ -53,4 +53,3 @@ class Country extends \yii\db\ActiveRecord
         return $this->hasMany(Network::class, ['country_id' => 'id']);
     }
 }
-

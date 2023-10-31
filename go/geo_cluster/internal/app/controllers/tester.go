@@ -201,7 +201,7 @@ func TesterNetwork(w http.ResponseWriter, r *http.Request) {
 		ones, _ := network.Mask.Size()
 		message.Ip = ipParam
 		message.Size = ones
-		
+
 		response <- message
 
 	}()
