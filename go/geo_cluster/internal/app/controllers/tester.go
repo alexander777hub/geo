@@ -192,14 +192,16 @@ func TesterNetwork(w http.ResponseWriter, r *http.Request) {
 			response <- message
 			return
 		}
-		fmt.Printf("%v", ip)
+		fmt.Printf("%v\n", ip)
 
 		network := getNetworbyIp(ip)
 
 		message.Network = network.String()
 		message.Mask = network.Mask.String()
+		ones, _ := network.Mask.Size()
 		message.Ip = ipParam
-
+		message.Size = ones
+		
 		response <- message
 
 	}()
