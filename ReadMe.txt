@@ -1,8 +1,9 @@
+
 1) git clone https://github.com/alexander777hub/geo.git
 2) cd geo
 composer install --prefer-dist
 php yii migrate
-3) сконфигрировать веб-сервер (у меня nginx + php-fpm)
+3) сконфигурировать веб-сервер (у меня nginx + php-fpm)
 4) добавить .env файлы
 В проекте два .env файла - для php (в корне папки geo) и для golang (geo/go/geo_cluster/)
 Пример .env для php
@@ -25,7 +26,7 @@ DB_CHARSET = utf8mb4
 WORKER_ACCESS_TOKEN = DLFLDFKDLkll
 4) убедиться что у пользователя, под которым работает вебсервер, есть права на папку geo(и в на папку geo/runtime)
 
-5) cd geo/go/geo_cluster/web
+5) cd go/geo_cluster/web
     go run index.go
 
     После этого должно работать два приложения:
